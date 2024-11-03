@@ -38,6 +38,7 @@
                             <td class="d-flex">
                                 <a href="{{ route('projects.show', $project->id) }}">Visualizza</a>
                                 <a href="{{ route('projects.create') }}">Crea Nuovo Project</a>
+                                <a href="{{ route('projects.edit', $project->id) }}">Modifica Project</a>
                                 <form action="" method="post">
                                     <button type="submit">Elimina</button>
                                 </form>
