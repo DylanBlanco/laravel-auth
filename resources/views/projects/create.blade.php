@@ -29,15 +29,15 @@
                 </div>
                 <div class="mb-3">
                     <label for="date_create" class="form-label">Data di Creazione</label>
-                       <input type="date" class="form-control" id="date_create" name="date_create">
+                    <input type="date" class="form-control" id="date_create" name="date_create">
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Descrizione</label>
                     <input type="text" class="form-control" id="description" name="description">
-                    <div class="mb-3">
-                        <label for="create_at" class="form-label">Data Inserimento</label>
-                        <input type="date" class="form-control" id="create_at" name="create_at">
-                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="create_at" class="form-label">Data Inserimento</label>
+                    <input type="date" class="form-control" id="create_at" name="create_at">
                 </div>
                 <div class="mb-3">
                     <label for="update_at" class="form-label">Data Modifica</label>
