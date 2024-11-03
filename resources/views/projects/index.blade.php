@@ -36,7 +36,7 @@
                             <td> {{ $project->date_create }} </td>
                             <td> {{ $project->description }} </td>
                             <td class="d-flex">
-                                <a href="#">Visualizza</a>
+                                <a href="{{ route('projects.show', $project->id) }}">Visualizza</a>
                                 <a href="#">Modifica</a>
                                 <form action="" method="post">
                                     <button type="submit">Elimina</button>

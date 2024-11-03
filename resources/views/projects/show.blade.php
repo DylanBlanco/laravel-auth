@@ -24,26 +24,16 @@
                         <th scope="col">Autore</th>
                         <th scope="col">Data Creazione</th>
                         <th scope="col">Descrizione</th>
-                        <th scope="col">Azioni</th>
-                    </tr>
+                        </tr>
                 </thead>
                 <tbody>
-                    @foreach ($projects as $project)
-                        <tr>
-                            <th scope="row"> {{ $project->id }} </th>
-                            <td> {{ $project->title }} </td>
-                            <td> {{ $project->author }} </td>
-                            <td> {{ $project->date_create }} </td>
-                            <td> {{ $project->description }} </td>
-                            <td class="d-flex">
-                                <a href="#">Visualizza</a>
-                                <a href="#">Modifica</a>
-                                <form action="" method="post">
-                                    <button type="submit">Elimina</button>
-                                </form>
-                            </td>
-                        </tr>    
-                    @endforeach
+                    <tr>
+                        <th scope="row"> {{ $project->id }} </th>
+                        <td> {{ $project->title }} </td>
+                        <td> {{ $project->author }} </td>
+                        <td> {{ $project->date_create }} </td>
+                        <td> {{ $project->description }} </td>
+                    </tr>    
                 </tbody>
             </table>
         </div>
