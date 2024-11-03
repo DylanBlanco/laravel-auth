@@ -39,8 +39,11 @@
                                 <a href="{{ route('projects.show', $project->id) }}">Visualizza</a>
                                 <a href="{{ route('projects.create') }}">Crea Nuovo Project</a>
                                 <a href="{{ route('projects.edit', $project->id) }}">Modifica Project</a>
-                                <form action="" method="post">
-                                    <button type="submit">Elimina</button>
+                                <form action="{{ route('projects.destroy', $project->id) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    {{-- <button type="submit">Elimina</button> --}}
+                                    <input type="submit" value="Cancella">
                                 </form>
                             </td>
                         </tr>    
