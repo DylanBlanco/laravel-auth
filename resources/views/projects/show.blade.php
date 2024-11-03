@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Tutti i project')
+@section('page-title', 'Project')
 
 @section('main-content')
     <div class="row">
@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-body">
                     <h1 class="text-center text-info">
-                        Tutti i Project
+                        Project | {{ $project->title }}
                     </h1>
                 </div>
             </div>

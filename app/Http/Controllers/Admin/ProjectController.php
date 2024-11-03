@@ -35,14 +35,16 @@ class ProjectController extends Controller
     {
         $data = $request->all();
 
-        // $title -> $data['title'];
-        // $author -> $data['author'];
-        // $date_create -> $data['date_create'];
-        // $description -> $data['description'];
-        // $project->title = $data['title'];
-        // $project->author = $data['author'];
-        // $project->date_create = $data['date_create'];
-        // $project->description = $data['description'];
+        $newProject = new Project;
+        $newProject->title = $data['title'];
+        $newProject->author = $data['author'];
+        $newProject->date_create = $data['date_create'];
+        $newProject->description = $data['description'];
+        $newProject->date_create = $data['create_at'];
+        $newProject->description = $data['update_at'];
+        $newProject->save();
+
+        return redirect()->route('projects.show', $newProject->id);
     }
 
     /**
