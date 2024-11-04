@@ -21,7 +21,7 @@ class ProjectSeeder extends Seeder
             
             Project::create([
                 'title' => fake()->sentence(),
-                'author' => fake()->sentence(),
+                'author' => fake()->name(),
                 'date_create' => fake()->date(),
                 'description' => fake()->paragraph(),
             ]);

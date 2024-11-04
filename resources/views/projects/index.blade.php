@@ -19,6 +19,16 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <td></td>
+                        <td>
+                            <a href="{{ route('projects.create') }}" class="btn btn-success  w-100">Crea Nuovo Project</a>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
                         <th scope="col">#</th>
                         <th scope="col">Titolo</th>
                         <th scope="col">Autore</th>
@@ -35,19 +45,29 @@
                             <td> {{ $project->author }} </td>
                             <td> {{ $project->date_create }} </td>
                             <td> {{ $project->description }} </td>
-                            <td class="d-flex">
-                                <a href="{{ route('projects.show', $project->id) }}">Visualizza</a>
-                                <a href="{{ route('projects.create') }}">Crea Nuovo Project</a>
-                                <a href="{{ route('projects.edit', $project->id) }}">Modifica Project</a>
+                            <td>
+                                <a href="{{ route('projects.show', $project->id) }}" class="btn btn-primary my-1  w-100">Visualizza</a>
+                                <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-primary my-1  w-100">Modifica</a>
                                 <form action="{{ route('projects.destroy', $project->id) }}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     {{-- <button type="submit">Elimina</button> --}}
-                                    <input type="submit" value="Cancella">
+                                    {{-- <button type="submit" value="Cancella" class="btn btn-danger">Cancella</button> --}}
+                                    <input type="submit" value="Cancella" class="btn btn-danger my-1 w-100">
                                 </form>
                             </td>
                         </tr>    
                     @endforeach
+                    <tr>
+                        <td></td>
+                        <td>
+                            <a href="{{ route('projects.create') }}" class="btn btn-success  w-100">Crea Nuovo Project</a>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
